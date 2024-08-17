@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="wieport" content="width=device-width initial-scale=1.0">
-        <link data-defautl-icon="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg" rel="shortcut icon" href="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg"/>
-        <title> Contacto </title>
-        <body>
-            <header>
-                Contacto
-            </header>
-            <nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg"/>
+    <title>Contacto - Plomero en Casa</title>
+    <link rel="stylesheet" href="estilos-contacto.css">
+</head>
+<body>
+
+    <header>
+        Contacto - Plomero en Casa
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Servicios</a>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <ul>
-                        <li><a href="#">Reparación de tuberias</a></li>
-                        <li><a href="#">Instalación de Sanitarios</a></li>
-                        <li><a href="#">Desatascos</a></li>
-                    </ul>
+                    <li><a href="#">Reparación de Tuberías</a></li>
+                    <li><a href="#">Instalación de Sanitarios</a></li>
+                    <li><a href="#">Desatascos</a></li>
                 </ul>
-            </nav>
-        </body>
-    </head>
+            </li>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-section">
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para ayudarte con cualquier necesidad de plomería que tengas.</p>
+        <form class="contact-form">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico">
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tu mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        © 2024 Plomero en Casa - Todos los derechos reservados
+    </footer>
+
+</body>
 </html>

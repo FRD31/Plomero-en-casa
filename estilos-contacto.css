@@ -1,0 +1,142 @@
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #2f00ff; /* Texto azul */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #2f00ff; /* Texto azul */
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+}
+
+nav {
+    background-color: #ffffff; /* Fondo blanco */
+    border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #2f00ff; /* Texto azul */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; /* Fondo blanco al pasar el cursor */
+    color: #0051ff; /* Texto azul más oscuro al pasar el cursor */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #fafafa; /* Fondo blanco */
+    border: 1px solid #39ff14; /* Borde verde neón */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: #2f00ff; /* Texto azul */
+}
+
+nav ul li ul li a:hover {
+    background-color: #b9b9b9; /* Fondo gris oscuro al pasar el cursor */
+    color: #2f00ff; /* Texto azul */
+}
+
+.contact-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #2f00ff; /* Texto azul */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #2f00ff; /* Texto azul */
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 75, 75, 0.5); /* Fondo gris oscuro transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 75, 75, 0.5); /* Efecto 3D */
+}
+
+.contact-form label {
+    display: block;
+    color: #2f00ff; /* Texto azul */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #39ff14; /* Borde verde neón */
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #2f00ff; /* Botón azul */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0051ff; /* Botón azul oscuro al pasar el cursor */
+}
+
+footer {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #2f00ff; /* Texto azul */
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    border-top: 2px solid #39ff14; /* Línea superior verde neón */
+}
