@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-default-icon="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg" rel="shortcut icon" href="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg" />
+    <title>Catálogo de Reparación de Tuberías</title>
+    <style>
+        body {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+        }
+
+        nav {
+            background-color: #ffffff; /* Fondo blanco */
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #2f00ff; /* Texto azul */
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffffff; /* Fondo blanco al pasar el cursor */
+            color: #0051ff; /* Texto azul más oscuro al pasar el cursor */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #fafafa; /* Fondo blanco */
+            border: 1px solid #39ff14; /* Borde verde neón */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 20px;
+            color: #2f00ff; /* Texto azul */
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #b9b9b9; /* Fondo gris oscuro al pasar el cursor */
+            color: #2f00ff; /* Texto azul */
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #39ff14; /* Borde verde neón */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+        }
+
+        .gallery-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(255, 75, 75, 0.5); /* Fondo gris oscuro transparente */
+            text-align: center;
+            color: #2f00ff; /* Texto azul */
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(255, 75, 75, 0.5); /* Efecto 3D */
+        }
+
+        .gallery-item p {
+            padding: 8px 10px;
+            color: #2f00ff; /* Texto azul */
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
+            text-align: center;
+            padding: 10px;
+            font-size: 1em;
+            border-top: 2px solid #39ff14; /* Línea superior verde neón */
+        }
+
+        @media(min-width: 768px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
+
+        @media(min-width: 1200px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Catálogo de Reparación de Tuberías
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Servicios</a>
+                <ul>
+                    <li><a href="#">Reparación de Tuberías</a></li>
+                    <li><a href="#">Instalación de Sanitarios</a></li>
+                    <li><a href="#">Desatascos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery">
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Servicio 1">
+                <h3>Reparación 1</h3>
+                <p>Solución rápida y efectiva.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Servicio 2">
+                <h3>Reparación 2</h3>
+                <p>Trabajo garantizado.</p>
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Servicio 3">
+                <h3>Reparación 3</h3>
+                <p>Servicio confiable.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="Servicio 4">
+                <h3>Reparación 4</h3>
+                <p>Desatascos sin daños.</p>
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="image5.jpg" alt="Servicio 5">
+                <h3>Reparación 5</h3>
+                <p>Resultados efectivos.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="image6.jpg" alt="Servicio 6">
+                <h3>Reparación 6</h3>
+                <p>Soluciones duraderas.</p>
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="image7.jpg" alt="Servicio 7">
+                <h3>Reparación 7</h3>
+                <p>Atención 24/7.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Plomero en Casa - Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
