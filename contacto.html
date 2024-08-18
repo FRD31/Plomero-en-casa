@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="C:\Users\luisf\Downloads\PLomero en casa\PLomero-en-casa.jpeg"/>
+    <link rel="shortcut icon" href="C:/Users/luisf/Downloads/PLomero en casa/PLomero-en-casa.jpeg" />
+    <link rel="stylesheet" href="styles.css">
     <title>Contacto - Plomero en Casa</title>
-    <link rel="stylesheet" href="estilos-contacto.css">
 </head>
 <body>
-
     <header>
-        Contacto - Plomero en Casa
+        Contacto
     </header>
 
     <nav>
@@ -18,7 +17,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#">Servicios</a>
                 <ul>
-                    <li><a href="#">Reparación de Tuberías</a></li>
+                    <li><a href="#">Reparación de tuberías</a></li>
                     <li><a href="#">Instalación de Sanitarios</a></li>
                     <li><a href="#">Desatascos</a></li>
                 </ul>
@@ -28,26 +27,24 @@
         </ul>
     </nav>
 
-    <div class="contact-section">
-        <h2>Contáctanos</h2>
-        <p>Estamos aquí para ayudarte con cualquier necesidad de plomería que tengas.</p>
-        <form class="contact-form">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre">
-
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico">
-
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tu mensaje"></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+    <main>
+        <section class="contact-form">
+            <form action="https://formspree.io/f/xvgpqpnb" method="POST">
+                <label>
+                    Tu correo electrónico:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Tu mensaje:
+                    <textarea name="message" required></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         © 2024 Plomero en Casa - Todos los derechos reservados
     </footer>
-
 </body>
 </html>
