@@ -6,6 +6,13 @@
     <link rel="shortcut icon" href="C:/Users/luisf/Downloads/PLomero en casa/PLomero-en-casa.jpeg" />
     <link rel="stylesheet" href="estilos-contacto.css">
     <title>Contacto - Plomero en Casa</title>
+    <script>
+        function mostrarNotificacion(event) {
+            event.preventDefault(); // Evita el envío inmediato del formulario
+            alert("Tu mensaje ha sido enviado al plomero. Por favor, está pendiente al correo que ingresaste, ahí recibirás la confirmación del plomero para el servicio.");
+            event.target.submit(); // Envía el formulario después de mostrar la notificación
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -29,7 +36,7 @@
 
     <main>
         <section class="contact-form">
-            <form action="https://formspree.io/f/xvgpqpnb" method="POST">
+            <form action="https://formspree.io/f/xvgpqpnb" method="POST" onsubmit="mostrarNotificacion(event)">
                 <label>
                     Tu correo electrónico:
                     <input type="email" name="email" required>
