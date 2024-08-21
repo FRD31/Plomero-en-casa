@@ -27,7 +27,13 @@ function detectDevTools() {
     }, 1000);
 }
 
-// Llamar a la función para detectar las herramientas de desarrollador
-detectDevTools();
+// Desactivar el botón derecho del ratón
+function disableRightClick() {
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+}
 
-// También puedes agregar detección para el clic derecho aquí si lo deseas
+// Llamar a las funciones de seguridad
+detectDevTools();
+disableRightClick();
