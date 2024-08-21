@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="PLomero-en-casa.jpeg" />
-    <title>Cambio de Llaves de Agua - Plomero en Casa</title>
+    <link rel="shortcut icon" href="Plomero-en-casa.jpeg">
+    <title>Catálogo de Instalaciones Eléctricas - Plomero en Casa</title>
     <style>
         body {
             background-color: #ffffff; /* Fondo blanco */
@@ -52,14 +52,14 @@
         }
 
         nav ul li a:hover {
-            background-color: #f0f0f0; /* Fondo gris claro al pasar el cursor */
+            background-color: #ffffff; /* Fondo blanco al pasar el cursor */
             color: #0051ff; /* Texto azul más oscuro al pasar el cursor */
         }
 
         nav ul li ul {
             display: none;
             position: absolute;
-            background-color: #ffffff; /* Fondo blanco */
+            background-color: #fafafa; /* Fondo blanco */
             border: 1px solid #39ff14; /* Borde verde neón */
             list-style: none;
             padding: 0;
@@ -83,55 +83,40 @@
             color: #2f00ff; /* Texto azul */
         }
 
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .catalogo {
             padding: 20px;
-            background-color: #ffffff; /* Fondo blanco */
         }
 
-        .gallery-row {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 1200px;
-            flex-wrap: wrap;
+        .catalogo h2 {
+            text-align: center;
+            color: #2f00ff; /* Texto azul */
         }
 
-        .gallery-item {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            overflow: hidden;
-            border-radius: 10px;
+        .servicio {
             background-color: #ffffff; /* Fondo blanco */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border: 2px solid #39ff14; /* Borde verde neón */
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .gallery-item img {
+        .servicio img {
             width: 100%;
             height: auto;
-            display: block;
+            border-radius: 10px;
             border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
         }
 
-        .gallery-item h3 {
-            margin: 0;
-            padding: 10px;
-            background-color: rgba(128, 128, 128, 0.7); /* Fondo gris oscuro transparente */
-            text-align: center;
+        .servicio h3 {
             color: #2f00ff; /* Texto azul */
-            font-size: 1em;
-            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.7); /* Efecto 3D */
+            font-size: 1.5em;
+            margin-top: 10px;
         }
 
-        .gallery-item p {
-            padding: 8px 10px;
+        .servicio p {
             color: #2f00ff; /* Texto azul */
-            font-size: 0.8em;
-            text-align: center;
+            font-size: 1em;
         }
 
         footer {
@@ -142,24 +127,12 @@
             font-size: 1em;
             border-top: 2px solid #39ff14; /* Línea superior verde neón */
         }
-
-        @media(min-width: 768px) {
-            .gallery-item {
-                width: 48%;
-            }
-        }
-
-        @media(min-width: 1200px) {
-            .gallery-item {
-                width: 30%;
-            }
-        }
     </style>
 </head>
 <body>
-    <script src="ciber.js"></script>
+
     <header>
-        Cambio de Llaves de Agua
+        Catálogo de Instalaciones Eléctricas
     </header>
 
     <nav>
@@ -169,43 +142,60 @@
                 <ul>
                     <li><a href="catalogo.html">Reparación de Tuberías</a></li>
                     <li><a href="Sanitarios.html">Instalación de Sanitarios</a></li>
-                    <li><a href="boilers.html">Cambios de Boiler</a></li>
-                    <li><a href="llaves.html">Cambio de Llaves de Agua</a></li>
-                    <li><a href="elec.html">Instalación eléctrica</a></li>
-                    <li><a href="#">Otro servicio</a></li>
+                    <li><a href="Boilers.html">Cambios de boiler</a></li>
+                    <li><a href="llaves-de-agua.html">Cambio de llaves de agua</a></li>
+                    <li><a href="elec.html">Instalaciones Eléctricas</a></li>
                 </ul>
             </li>
             <li><a href="#">Acerca de Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
-    <div class="gallery">
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <img src="antes1.jpg" alt="Antes del cambio de llave de agua">
-                <h3>Antes</h3>
-                <p>Llave de agua antigua antes del cambio.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="despues1.jpg" alt="Después del cambio de llave de agua">
-                <h3>Después</h3>
-                <p>Nueva llave de agua instalada y funcionando.</p>
-            </div>
+    <div class="catalogo">
+        <h2>Servicios Eléctricos Profesionales</h2>
+
+        <div class="servicio">
+            <img src="instalacion_general.jpg" alt="Instalación eléctrica general">
+            <h3>Instalación Eléctrica General</h3>
+            <p>Realizamos instalaciones eléctricas completas para casas, oficinas y comercios, asegurando un trabajo seguro y eficiente.</p>
         </div>
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <img src="antes2.jpg" alt="Antes del cambio de llave de agua">
-                <h3>Antes</h3>
-                <p>Preparación para el cambio de la llave de agua.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="despues2.jpg" alt="Después del cambio de llave de agua">
-                <h3>Después</h3>
-                <p>Llave de agua nueva en su lugar.</p>
-            </div>
+
+        <div class="servicio">
+            <img src="mantenimiento.jpg" alt="Mantenimiento eléctrico">
+            <h3>Mantenimiento Eléctrico</h3>
+            <p>Ofrecemos mantenimiento preventivo y correctivo para sistemas eléctricos, evitando fallas y garantizando su correcto funcionamiento.</p>
         </div>
-        <!-- Puedes agregar más pares de imágenes "Antes" y "Después" según sea necesario -->
+
+        <div class="servicio">
+            <img src="circuitos.jpg" alt="Diseño de circuitos">
+            <h3>Diseño de Circuitos</h3>
+            <p>Diseñamos circuitos eléctricos adaptados a las necesidades de tu proyecto, optimizando el uso de energía.</p>
+        </div>
+
+        <div class="servicio">
+            <img src="iluminacion.jpg" alt="Instalación de iluminación">
+            <h3>Instalación de Iluminación</h3>
+            <p>Instalamos sistemas de iluminación interior y exterior, mejorando la estética y seguridad de tu espacio.</p>
+        </div>
+
+        <div class="servicio">
+            <img src="paneles_solares.jpg" alt="Instalación de paneles solares">
+            <h3>Instalación de Paneles Solares</h3>
+            <p>Instalamos paneles solares para aprovechar la energía renovable, reduciendo costos de electricidad.</p>
+        </div>
+
+        <div class="servicio">
+            <img src="tableros_electricos.jpg" alt="Instalación de tableros eléctricos">
+            <h3>Instalación de Tableros Eléctricos</h3>
+            <p>Realizamos la instalación de tableros eléctricos para una distribución segura y eficiente de la energía.</p>
+        </div>
+
+        <div class="servicio">
+            <img src="automatizacion.jpg" alt="Automatización de sistemas">
+            <h3>Automatización de Sistemas Eléctricos</h3>
+            <p>Automatizamos sistemas eléctricos para el control remoto de luces, puertas y otros dispositivos, ofreciendo mayor comodidad y eficiencia.</p>
+        </div>
     </div>
 
     <footer>
