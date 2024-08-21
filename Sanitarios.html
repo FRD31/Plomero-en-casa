@@ -4,79 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="C:/Users/luisf/Downloads/PLomero en casa/PLomero-en-casa.jpeg" />
-    <link rel="stylesheet" href="estilos-sanitario.css">
     <title>Instalación de Sanitarios - Plomero en Casa</title>
     <style>
         body {
-            background-color: white;
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
             font-family: Arial, sans-serif;
-            color: #4B0082; /* Rojo vino para texto */
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
         }
 
-        header, footer {
+        header {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
             text-align: center;
             padding: 20px;
-            background-color: #000080; /* Azul de fondo */
-            color: white;
+            font-size: 2.5em;
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
+        }
+
+        nav {
+            background-color: #ffffff; /* Fondo blanco */
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
         }
 
         nav ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
-            background-color: #000080;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin: 0 15px;
+            position: relative;
         }
 
         nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #2f00ff; /* Texto azul */
             text-decoration: none;
-            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #00FF00; /* Verde neón para hover */
+            background-color: #ffffff; /* Fondo blanco al pasar el cursor */
+            color: #0051ff; /* Texto azul más oscuro al pasar el cursor */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #fafafa; /* Fondo blanco */
+            border: 1px solid #39ff14; /* Borde verde neón */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 20px;
+            color: #2f00ff; /* Texto azul */
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #b9b9b9; /* Fondo gris oscuro al pasar el cursor */
+            color: #2f00ff; /* Texto azul */
         }
 
         .gallery {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+
+        .gallery-row {
+            display: flex;
             justify-content: center;
-            margin: 20px;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
         }
 
         .gallery-item {
+            width: 100%;
+            max-width: 300px;
             margin: 10px;
-            border: 2px solid #4B0082; /* Rojo vino */
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 300px;
-            text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #39ff14; /* Borde verde neón */
         }
 
         .gallery-item img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            border: 3px solid #00FF00; /* Verde neón */
+            display: block;
+            border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
         }
 
         .gallery-item h3 {
-            color: #00FF00;
-            margin: 10px 0;
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(128, 128, 128, 0.7); /* Fondo gris oscuro transparente */
+            text-align: center;
+            color: #2f00ff; /* Texto azul */
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.7); /* Efecto 3D */
         }
 
         .gallery-item p {
-            background-color: rgba(128, 128, 128, 0.8); /* Recuadro 3D transparente gris oscuro */
-            padding: 5px;
-            border-radius: 5px;
+            padding: 8px 10px;
+            color: #2f00ff; /* Texto azul */
+            font-size: 0.8em;
+            text-align: center;
         }
 
+        footer {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #2f00ff; /* Texto azul */
+            text-align: center;
+            padding: 10px;
+            font-size: 1em;
+            border-top: 2px solid #39ff14; /* Línea superior verde neón */
+        }
+
+        @media(min-width: 768px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
+
+        @media(min-width: 1200px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>
         Instalación de Sanitarios
     </header>
@@ -84,45 +165,49 @@
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <ul>
-                <li><a href="#">Reparación de tuberías</a></li>
-                <li><a href="#">Instalación de Sanitarios</a></li>
-                <li><a href="#">Desatascos</a></li>
-            </ul>
-            <li><a href="acerca.html">Acerca de Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Servicios</a>
+                <ul>
+                    <li><a href="#">Reparación de Tuberías</a></li>
+                    <li><a href="#">Instalación de Sanitarios</a></li>
+                    <li><a href="#">Desatascos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section class="gallery">
+    <div class="gallery">
+        <div class="gallery-row">
             <div class="gallery-item">
+                <img src="antes1.jpg" alt="Antes de la instalación">
                 <h3>Antes</h3>
-                <img src="antes1.jpg" alt="Antes de la instalación del sanitario">
-                <p>Estado inicial del baño antes de la instalación del sanitario.</p>
+                <p>Estado inicial antes de la instalación del sanitario.</p>
             </div>
             <div class="gallery-item">
+                <img src="despues1.jpg" alt="Después de la instalación">
                 <h3>Después</h3>
-                <img src="despues1.jpg" alt="Después de la instalación del sanitario">
-                <p>Baño renovado con el nuevo sanitario instalado.</p>
+                <p>Sanitario instalado y funcionando.</p>
             </div>
+        </div>
+        <div class="gallery-row">
             <div class="gallery-item">
+                <img src="antes2.jpg" alt="Antes de la instalación">
                 <h3>Antes</h3>
-                <img src="antes2.jpg" alt="Antes de la instalación del sanitario">
-                <p>Condición del área antes de la instalación.</p>
+                <p>Área preparada para la instalación.</p>
             </div>
             <div class="gallery-item">
+                <img src="despues2.jpg" alt="Después de la instalación">
                 <h3>Después</h3>
-                <img src="despues2.jpg" alt="Después de la instalación del sanitario">
-                <p>Resultado final después de la instalación del sanitario.</p>
+                <p>Sanitario instalado con éxito.</p>
             </div>
-            <!-- Puedes agregar más bloques de "Antes" y "Después" según sea necesario -->
-        </section>
-    </main>
+        </div>
+        <!-- Puedes agregar más pares de imágenes "Antes" y "Después" según sea necesario -->
+    </div>
 
     <footer>
         © 2024 Plomero en Casa - Todos los derechos reservados
     </footer>
+
 </body>
 </html>
