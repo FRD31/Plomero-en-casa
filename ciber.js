@@ -1,5 +1,6 @@
 // Función para ocultar el contenido y mostrar un mensaje de advertencia
-function hideContent() {
+function showWarning() {
+    alert('El acceso al código fuente de esta página está restringido.');
     document.body.innerHTML = `
         <div style="text-align: center; margin-top: 20%;">
             <h1>Acceso Denegado</h1>
@@ -9,31 +10,24 @@ function hideContent() {
     `;
 }
 
-// Detectar la apertura de las herramientas de desarrollador
-function detectDevTools() {
-    const threshold = 160; // Umbral de tamaño de la ventana para detectar el panel de herramientas
-    let isDevToolsOpen = false;
+// Desactivar el botón derecho del ratón y mostrar alerta
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    showWarning();
+});
 
-    setInterval(() => {
-        if (window.outerWidth - window.innerWidth > threshold || 
-            window.outerHeight - window.innerHeight > threshold) {
-            if (!isDevToolsOpen) {
-                isDevToolsOpen = true;
-                hideContent();
-            }
-        } else {
-            isDevToolsOpen = false;
-        }
-    }, 1000);
-}
-
-// Desactivar el botón derecho del ratón
-function disableRightClick() {
-    document.addEventListener('contextmenu', function(e) {
+// Detectar si el usuario intenta ver el código fuente usando herramientas del navegador
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
         e.preventDefault();
-    });
-}
+        showWarning();
+    }
+});
 
-// Llamar a las funciones de seguridad
-detectDevTools();
-disableRightClick();
+// Detectar si el usuario intenta abrir las herramientas de desarrollador con F12
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12') {
+        e.preventDefault();
+        showWarning();
+    }
+});
