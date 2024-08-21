@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Plomero-en-casa.jpeg">
-    <title>Catálogo de Instalaciones Eléctricas - Plomero en Casa</title>
+    <link rel="stylesheet" href="responsivo.css">
+    <title>Instalación Eléctrica - Plomero en Casa</title>
     <style>
         body {
             background-color: #ffffff; /* Fondo blanco */
@@ -83,40 +84,55 @@
             color: #2f00ff; /* Texto azul */
         }
 
-        .catalogo {
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-        }
-
-        .catalogo h2 {
-            text-align: center;
-            color: #2f00ff; /* Texto azul */
-        }
-
-        .servicio {
             background-color: #ffffff; /* Fondo blanco */
-            border: 2px solid #39ff14; /* Borde verde neón */
-            border-radius: 10px;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .servicio img {
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #39ff14; /* Borde verde neón */
+        }
+
+        .gallery-item img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            display: block;
             border-bottom: 2px solid #39ff14; /* Línea inferior verde neón */
         }
 
-        .servicio h3 {
-            color: #2f00ff; /* Texto azul */
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-
-        .servicio p {
+        .gallery-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(128, 128, 128, 0.7); /* Fondo gris oscuro transparente */
+            text-align: center;
             color: #2f00ff; /* Texto azul */
             font-size: 1em;
+            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.7); /* Efecto 3D */
+        }
+
+        .gallery-item p {
+            padding: 8px 10px;
+            color: #2f00ff; /* Texto azul */
+            font-size: 0.8em;
+            text-align: center;
         }
 
         footer {
@@ -127,12 +143,24 @@
             font-size: 1em;
             border-top: 2px solid #39ff14; /* Línea superior verde neón */
         }
+
+        @media(min-width: 768px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
+
+        @media(min-width: 1200px) {
+            .gallery-item {
+                width: 48%;
+            }
+        }
     </style>
 </head>
 <body>
-
+    <script src="ciber.js"></script>
     <header>
-        Catálogo de Instalaciones Eléctricas
+        Instalación Eléctrica
     </header>
 
     <nav>
@@ -144,58 +172,40 @@
                     <li><a href="Sanitarios.html">Instalación de Sanitarios</a></li>
                     <li><a href="Boilers.html">Cambios de boiler</a></li>
                     <li><a href="llaves-de-agua.html">Cambio de llaves de agua</a></li>
-                    <li><a href="elec.html">Instalaciones Eléctricas</a></li>
+                    <li><a href="elec.html">Instalación electrica</a></li>
                 </ul>
             </li>
             <li><a href="#">Acerca de Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
 
-    <div class="catalogo">
-        <h2>Servicios Eléctricos Profesionales</h2>
-
-        <div class="servicio">
-            <img src="instalacion_general.jpg" alt="Instalación eléctrica general">
-            <h3>Instalación Eléctrica General</h3>
-            <p>Realizamos instalaciones eléctricas completas para casas, oficinas y comercios, asegurando un trabajo seguro y eficiente.</p>
+    <div class="gallery">
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="antes1.jpg" alt="Antes de la instalación">
+                <h3>Antes</h3>
+                <p>Estado del sistema eléctrico antes de la instalación.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="despues1.jpg" alt="Después de la instalación">
+                <h3>Después</h3>
+                <p>Sistema eléctrico nuevo, instalado y funcionando.</p>
+            </div>
         </div>
-
-        <div class="servicio">
-            <img src="mantenimiento.jpg" alt="Mantenimiento eléctrico">
-            <h3>Mantenimiento Eléctrico</h3>
-            <p>Ofrecemos mantenimiento preventivo y correctivo para sistemas eléctricos, evitando fallas y garantizando su correcto funcionamiento.</p>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="antes2.jpg" alt="Antes de la instalación">
+                <h3>Antes</h3>
+                <p>Sistema eléctrico antiguo, listo para ser reemplazado.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="despues2.jpg" alt="Después de la instalación">
+                <h3>Después</h3>
+                <p>Nuevo sistema eléctrico instalado, cumpliendo con los estándares.</p>
+            </div>
         </div>
-
-        <div class="servicio">
-            <img src="circuitos.jpg" alt="Diseño de circuitos">
-            <h3>Diseño de Circuitos</h3>
-            <p>Diseñamos circuitos eléctricos adaptados a las necesidades de tu proyecto, optimizando el uso de energía.</p>
-        </div>
-
-        <div class="servicio">
-            <img src="iluminacion.jpg" alt="Instalación de iluminación">
-            <h3>Instalación de Iluminación</h3>
-            <p>Instalamos sistemas de iluminación interior y exterior, mejorando la estética y seguridad de tu espacio.</p>
-        </div>
-
-        <div class="servicio">
-            <img src="paneles_solares.jpg" alt="Instalación de paneles solares">
-            <h3>Instalación de Paneles Solares</h3>
-            <p>Instalamos paneles solares para aprovechar la energía renovable, reduciendo costos de electricidad.</p>
-        </div>
-
-        <div class="servicio">
-            <img src="tableros_electricos.jpg" alt="Instalación de tableros eléctricos">
-            <h3>Instalación de Tableros Eléctricos</h3>
-            <p>Realizamos la instalación de tableros eléctricos para una distribución segura y eficiente de la energía.</p>
-        </div>
-
-        <div class="servicio">
-            <img src="automatizacion.jpg" alt="Automatización de sistemas">
-            <h3>Automatización de Sistemas Eléctricos</h3>
-            <p>Automatizamos sistemas eléctricos para el control remoto de luces, puertas y otros dispositivos, ofreciendo mayor comodidad y eficiencia.</p>
-        </div>
+        <!-- Puedes agregar más pares de imágenes "Antes" y "Después" según sea necesario -->
     </div>
 
     <footer>

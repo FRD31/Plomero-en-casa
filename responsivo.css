@@ -1,0 +1,61 @@
+/* CSS para hacer el sitio web responsivo en dispositivos móviles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Asegura que todo el contenido esté alineado y centrado en pantallas pequeñas */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Imágenes dentro de la galería */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #39ff14;
+}
+
+/* Asegura que la galería esté bien alineada en teléfonos */
+.gallery-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Asegura que el footer esté bien alineado */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #2f00ff;
+    border-top: 2px solid #39ff14;
+    width: 100%;
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .header, .nav, .gallery, .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
